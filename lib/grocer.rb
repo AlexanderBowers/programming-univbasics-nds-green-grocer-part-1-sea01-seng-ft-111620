@@ -31,5 +31,6 @@ def consolidate_cart(cart)
       end
     end
   receipt = receipt.uniq
+  binding.pry
   receipt
 end
