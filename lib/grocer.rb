@@ -18,9 +18,9 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   receipt = []
-  counter = Hash.new(1)
-  #cart.each { |product| receipt << product}
-  cart.each {|item| counter[item] += 1 }
+  counter = Hash.new(0)
+  cart.each { |product| receipt << product}
+  receipt.each {|item| counter[item] += 1 }
   #binding.pry
   cart.each do |item|
     counter.each do |same_item|
