@@ -19,10 +19,10 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   receipt = []
   counter = Hash.new(1)
-  cart.each { |product| receipt << product}
-  receipt.each {|item| counter[item] += 1 }
+  #cart.each { |product| receipt << product}
+  cart.each {|item| counter[item] += 1 }
   #binding.pry
-  receipt.each do |item|
+  cart.each do |item|
     counter.each do |same_item|
        #binding.pry
         if item[:item] ==  same_item[0][:item]
